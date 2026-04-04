@@ -1,0 +1,24 @@
+Column Name                  Type          Column Definition 
+RecordID                     int           Unique identifier of the record 
+MAK                          bigint        Melissa Address Key (MAK) is a random ten-digit number assigned to unique addresses worldwide with no duplicates 
+BaseMAK                      bigint        Unique ten-digit ID that uniquely identifies a base address 
+Address                      varchar(50)   Address of the record 
+Suite                        varchar(20)   Suite of the address 
+City                         varchar(35)   Name of the city as it should appear as part of the address 
+State                        varchar(2)    Two-character state, province, or territory abbreviation  
+HouseNumber                  varchar(10)   House number of the address 
+StreetPreDirection           varchar(5)    Street predirection of the address 
+StreetName                   varchar(40)   Street name of the address 
+StreetSuffix                 varchar(10)   Street suffix of the address 
+StreetPostDirection          varchar(5)    Street postdirection of the address 
+SuiteType                    varchar(10)   Suite type of the address 
+SuiteNumber                  varchar(10)   Suite number of the address 
+ZipCode                      varchar(5)    Five-digit postal code used by the United States Postal Service 
+ZipCodePlus4                 varchar(4)    Four-digit code that represents deliver routes within delivery areas (extends the five-digit zip) 
+Latitude                     decimal(18,6) Latitude of the address 
+Longitude                    decimal(18,6) Longitude of the address 
+CensusKey                    varchar(16)   Fifteen or sixteen-digit key that represents: State (2) + County (3) + Tract (6) + Block Group Number (4) + Optional Block Suffix (1). The suffix is used to indicate if any changes were made the to Block Group Number   
+CensusKeyDecennial           varchar(15)   Fifteen-digit key that represents: State (2) + County (3) + Tract (6) + Block Group Number (4) 
+GeoLevel                     varchar(12)   Defines how accurate and specific the latitude and longitude are 
+PlaceCode                    varchar(7)    Seven-digit identifier for location and administrative unit: State (2) + PlaceCode (5) 
+ElevationInMeters            decimal(6,2) Elevation of the address in meters 
