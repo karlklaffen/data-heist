@@ -1,20 +1,17 @@
 import pandas as pd
 import numpy as np
-import os
 
-# Does not work, translations error
 def textToArray(file):
-    with open(file, 'r') as file:
+    with open(file, 'r', encoding='utf-8') as file:
         content = file.read()
-    tweets = content.split(delimiter="\n")
-    print(tweets)
+    tweets = content.splitlines()
+    #print(len(tweets))
     return tweets
 
-#tweets = textToArray('Datasets/tweets.txt')
-#emojis = textToArray('Datasets/emojis.txt')
+tweets = textToArray('Datasets/tweets.txt')
+emojis = textToArray('Datasets/emoji.txt')
 
 data_files = ['Datasets/ConsumerData.csv', 'Datasets/FONEData.csv', 'Datasets/USAddressData.csv', 'Datasets/ZipData.csv']
 ConsumerData, FONEData, USAddressData, ZipData = [pd.read_csv(file) for file in data_files]
+#print(ConsumerData.shape[0], FONEData.shape[0], USAddressData.shape[0], ZipData.shape[0])
 
-print(ConsumerData, FONEData, USAddressData, ZipData)
-print(ConsumerData.shape[0], FONEData.shape[0], USAddressData.shape[0], ZipData.shape[0])
