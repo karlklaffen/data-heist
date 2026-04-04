@@ -1,0 +1,45 @@
+Column Name                  Type          Column Definition
+RecordID                     int           Unique identifier of the record
+MAK                          bigint        Melissa Address Key (MAK) is a random ten-digit number assigned to unique addresses worldwide with no duplicates
+BaseMak                      bigint        Unique ten-digit ID to uniquely identify a base address
+Address                      varchar(50)   Address of the consumer
+City                         varchar(35)   City of the consumer
+State                        varchar(2)    Two-character state, province, or territory abbreviation
+ZipCode                      varchar(5)    Five-digit postal code used by the United States Postal Service
+Latitude                     decimal(18,6) Latitude of the consumer's address
+Longitude                    decimal(18,6) Longitude of the consumer's address
+OwnerRenter                  varchar(1)    Set to "O" if Consumer is a house owner or set to "R" if a house renter
+HomePurchaseDate             varchar(6)    YYYYMM date that the consumer's house is purchased or empty if unknown
+Charitable                   varchar(1)    Indicates whether or not a consumer contributes to charities. 'Y' for Yes, 'N' for No and empty for unknown
+Health                       varchar(1)    Indicates whether or not a consumer cares about health. 'Y' for Yes, 'N' for No and empty for unknown
+Political                    varchar(1)    Indicates whether or not a consumer involved in politics. 'Y' for Yes, 'N' for No and empty for unknown
+Religious                    varchar(1)    Indicates whether or not a consumer involved in religious practice. 'Y' for Yes, 'N' for No and empty for unknown
+Veteran                      varchar(1)    Indicates whether or not a consumer is a veteran. 'Y' for Yes, 'N' for No and empty for unknown
+MaritialStatus               varchar(1)    Indicates the maritial status in the household. 'M' = Married, 'S' = Single, 'A' = Inferred Married, 'B' = Inferred Single, Empty for unknown
+SingleParent                 varchar(1)    Indicates whether or not a consumer is a single parent. 'Y' for Yes, 'N' for No and empty for unknown
+NumberofChildren             varchar(1)    Number of children the consumer has or empty if unknown
+GrandChildren                varchar(1)    Indicates whether or not a consumer is a grandparent. 'Y' for Yes, 'N' for No and empty for unknown
+HouseholdSize                varchar(1)    Number of people that occupy the consumer's house or empty if unknown
+CatOwner                     varchar(1)    Indicates whether or not a consumer owns a cat. 'Y' for Yes, 'N' for No and empty for unknown
+DogOwner                     varchar(1)    Indicates whether or not a consumer owns a dog. 'Y' for Yes, 'N' for No and empty for unknown
+Networth                     varchar(1)    Range of 1-9 to predict household's networth. 1 = Less than or equal to 0, 2 = $1 - $4,999, 3 = $5,000 - $9,999, 4 = $10,000 - $24,999, 5 = $25,000 - $49,999, 6 = $50,000 - $99,999, 7 = $100,000 - $249,999, 8 = $250,000 - $499,999, 9 = $500,000+
+CreditCardUser               varchar(1)    Indicates whether or not a consumer owns a credit card. 'Y' for Yes, 'N' for No and empty for unknown
+VehicleKnownOwnedNumber      varchar(1)    Number of vehicles the consumer owns or empty if unknown
+SelfImprovement              varchar(1)    Indicates whether or not a consumer has interests in self improvement. 'Y' for Yes, 'N' for No and empty for unknown
+MusicCollector               varchar(1)    Indicates whether or not a consumer collects music. 'Y' for Yes, 'N' for No and empty for unknown
+MovieCollector               varchar(1)    Indicates whether or not a consumer collects movies. 'Y' for Yes, 'N' for No and empty for unknown
+Photography                  varchar(1)    Indicates whether or not a consumer has interests in photography. 'Y' for Yes, 'N' for No and empty for unknown
+AutoWork                     varchar(1)    Indicates whether or not a consumer has interests in auto work. 'Y' for Yes, 'N' for No and empty for unknown
+Fishing                      varchar(1)    Indicates whether or not a consumer has interests in fishing. 'Y' for Yes, 'N' for No and empty for unknown
+CampingHiking                varchar(1)    Indicates whether or not a consumer has interests in camping and hiking. 'Y' for Yes, 'N' for No and empty for unknown
+HuntingShooting              varchar(1)    Indicates whether or not a consumer has interests in hunting and shooting. 'Y' for Yes, 'N' for No and empty for unknown
+Gardening                    varchar(1)    Indicates whether or not a consumer has interests in gardening. 'Y' for Yes, 'N' for No and empty for unknown
+EnvironmentalIssues          varchar(1)    Indicates whether or not a consumer has interests in environmental issues. 'Y' for Yes, 'N' for No and empty for unknown
+HomeImprovement              varchar(1)    Indicates whether or not a consumer has interests in home improvements. 'Y' for Yes, 'N' for No and empty for unknown
+HomeImprovementDIY           varchar(1)    Indicates whether or not a consumer has interests in DIY home improvements. 'Y' for Yes, 'N' for No and empty for unknown
+OutdoorsGrouping             varchar(1)    Indicates whether or not a consumer has interests in meeting up in groups outdoors. 'Y' for Yes, 'N' for No and empty for unknown
+InvestmentsForeign           varchar(1)    Indicates whether or not a consumer has interests in foreign investments. 'Y' for Yes, 'N' for No and empty for unknown
+BeautyCosmetics              varchar(1)    Indicates whether or not a consumer has interests in beauty cosmetics. 'Y' for Yes, 'N' for No and empty for unknown
+TVCable                      varchar(1)    Indicates whether or not a consumer has a TVCable subscription. 'Y' for Yes, 'N' for No and empty for unknown
+WirelessCellularPhoneOwner   varchar(1)    Indicates whether or not a consumer owns a cell phone. 'Y' for Yes, 'N' for No and empty for unknown
+EducationOnline              varchar(1)    Indicates whether or not a consumer has interests in obtaining education online. 'Y' for Yes, 'N' for No and empty for unknown

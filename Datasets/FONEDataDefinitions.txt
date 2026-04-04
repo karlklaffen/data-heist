@@ -1,0 +1,15 @@
+Column Name        Type           Column Definition 
+RecordID           bigint         Unique identifier of the record 
+NPA                varchar(3)     Number Plan Area (NPA) code is the first three digits of a ten-digit North American Numbering Plan number (commonly called the area code)
+NXX                varchar(3)     Central Office code is the first three digits following the area code in a ten-digit North American Numbering Plan number (commonly called the telephone exchange or prefix)
+LATA               varchar(3)     Local Access and Transport Area (LATA) code of the rate center 
+RateCenterName     varchar(10)    Name of the rate center 
+WireCenterName     varchar(25)    Name of the wire center 
+WireCenterCity     varchar(28)    Name of the city that the wire center is located in 
+State              varchar(2)     Two-character state, province, or territory abbreviation 
+ZipCode1           varchar(5)     Five-digit postal code used by the United States Postal Service 
+ZipCode2           varchar(5)     Second possible postal code 
+ZipCode3           varchar(5)     Third possible postal code 
+FIPSCode           varchar(5)     Five-digit United States FIPS county code: State (2) + County Code (3) 
+Latitude           varchar(7)     Latitude of the general NPA NXX service area 
+Longitude          varchar(8)     Longitude of the general NPA NXX service area 
