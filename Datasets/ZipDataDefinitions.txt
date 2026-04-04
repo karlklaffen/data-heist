@@ -1,0 +1,35 @@
+Column Name                           Type          Column Definition
+RecordID                              int           Unique identifier of the record
+ZipCode                               varchar(5)    Five-digit zip code used by the United States Postal Service
+City                                  varchar(30)   City of the area of the zip code
+County                                varchar(25)   County name of the zip code
+State                                 varchar(2)    State of the area of the zip code
+Latitude                              decimal(7,4)  Latitude of the zip code
+Longitude                             decimal(9,4)  Longitude of the zip code
+DominantAreaCode                      varchar(3)    Most popular 3-digit area code used for phone numbers
+ResidentialDeliveries                 varchar(6)    Number of residential deliveries
+ResidentialPOBoxes                    varchar(6)    Number of residential PO boxes
+BusinessDeliveries                    varchar(6)    Number of business deliveries
+BusinessPOBoxes                       varchar(6)    Number of business PO boxes
+LastLineIndicator                     varchar(1)    An "L" indicates that the city name is the official USPS name for the zip code 
+TotalPopulation                       varchar(10)   Total population of the zip code
+PopulationWhite                       varchar(10)   Total population of white in the zip code
+PopulationAfricanAmerican             varchar(10)   Total population of African Americans in the zip code
+PopulationAmericanIndianAlaskaNative  varchar(10)   Total population of Native Americans in the zip code
+PopulationAsian                       varchar(10)   Total population of Asians in the zip code
+PopulationHispanic                    varchar(10)   Total population of Hispanics in the zip code
+PopulationPacificIslander             varchar(10)   Total population of Pacific Islanders in the zip code
+PopulationOther                       varchar(10)   Total population of other ethnicities not listed in the zip code
+PopulationMultipleRace                varchar(10)   Total population of people with mixed ethnicities in the zip code
+MedianHouseholdIncome                 varchar(10)   Median household income of total population in the zip code
+PerCapitaIncome                       varchar(10)   Per capita income of the zip code
+MedianHomeValue                       varchar(10)   Median home value in the zip code
+MedianAge                             varchar(5)    Median age of the total population in the zip code
+MedianAgeMale                         varchar(5)    Median age of the male population in the zip code
+MedianAgeFemale                       varchar(5)    Median age of the female population in the zip code
+EducationNinthGradeOrLess             varchar(5)    Total population with education of ninth grade or less in the zip code
+EducationSomeHighSchool               varchar(5)    Total population with some highschool education in the zip code
+EducationHighSchoolGraduate           varchar(5)    Total population with highschool graduate education in the zip code
+EducationSomeCollegeNoDiploma         varchar(5)    Total population with some college education without a diploma in the zip code
+EducationAssociatesDegree             varchar(5)    Total population with associate's degree in the zip code
+EducationBachelorsDegree              varchar(5)    Total population with bachelor's degree in the zip code
