@@ -19,10 +19,15 @@ These categories and respective predictors allow the model to distinguish betwee
 
 Predictors Included
 Socio Demographics- Marital status, Single parent, Number of children, Grandchildren, Household size, Veteran status.
+
 Financial Profile- Net worth, Home ownership vs. Renting, Credit card usage, Foreign investments, Number of vehicles.
+
 Values & Beliefs- Religious involvement, Political active, Charitable giving, Environmental consciousness.
+
 Interests & Hobbies- Photography, Auto work, Movie collecting, Beauty/Cosmetics, DIY, Home improvement, Self-improvement.
+
 Lifestyle & Tech- Health conscious, Pet ownership (Cat/Dog), TV cable subscription, Wireless/Cellular owner, Online education.
+
 Outdoor & Fitness- Fishing, Camping/Hiking, Hunting/Shooting, Outdoor groups.
 
 
