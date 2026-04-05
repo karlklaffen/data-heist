@@ -20,14 +20,13 @@ details = df.columns
 # y, m, o = 1 (yes, married, owner)
 # n, s, r, nan = 0 (no, single, renter)
 
+le = sklearn.preprocessing.LabelEncoder()
+df['Address'] = le.fit_transform(df["Address"])
+
 string_cols = df.select_dtypes(include='object').columns
 
 for col in string_cols:
-    if col == 'Address':
-        continue
     df[col] = df[col].apply(lambda val: int(val in ['Y', 'M', 'O'])).astype(int)
-
-num_cols = df.select_dtypes(include=['int64', 'float64']).columns
 
 df.drop(['HomePurchaseDate', 'NumberOfChildren', 'HouseholdSize', 'NetWorth', 'VehicleKnownOwnedNumber'], axis = 1, inplace = True)
 
