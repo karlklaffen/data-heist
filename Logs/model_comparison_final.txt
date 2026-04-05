@@ -1,0 +1,46 @@
+neural_network:
+    model_type: PyTorch Neural Network
+    architecture: 30 → 128 → 64 → 2
+    device: cpu
+  metrics:
+      MAE: 0.422175
+      MSE: 0.366168
+      RMSE: 0.605118
+      R2: -1402.584839
+      MAPE: 0.612460
+nn_errors:
+  ERROR_ANALYSIS:
+    latitude:
+        mean_error: 0.23879514634609222
+        std_error: 0.1561727076768875
+        max_error: 0.8774909973144531
+    longitude:
+        mean_error: 0.6055541634559631
+        std_error: 0.5331289172172546
+        max_error: 3.050445556640625
+      combined_euclidean: 0.650937
+random_forest:
+    model_type: sklearn Random Forest
+    use_scaler: False
+  metrics:
+      MAE: 0.014170
+      MSE: 0.000330
+      RMSE: 0.018166
+      R2: 0.092403
+      MAPE: 0.029112
+rf_errors:
+  ERROR_ANALYSIS:
+    latitude:
+        mean_error: 0.016069
+        std_error: 0.013434
+        max_error: 0.068504
+    longitude:
+        mean_error: 0.012272
+        std_error: 0.008409
+        max_error: 0.042917
+      combined_euclidean: 0.020219
+comparison:
+    winner: Random Forest
+    best_r2: 0.092403
+    r2_difference: 1402.677242
+    recommendation: Use Random Forest for best performance

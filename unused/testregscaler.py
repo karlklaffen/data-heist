@@ -19,27 +19,11 @@ from dataanalysis import (
 )
 import os
 
-# ============================================================
-# PHASE 1: DATA ANALYSIS (Reused from main run)
-# ============================================================
-print("\n" + "="*70)
-print("SCALER ANALYSIS - DATA PROPERTIES")
-print("="*70)
-
 data_log = {}
 data_log.update(analyze_output_range(y_train))
 data_log.update(correlation_analysis(X_train, y_train))
 data_log.update(data_sufficiency_check(X_train, X_test))
-
 print("✓ Data analysis complete")
-
-
-# ============================================================
-# PHASE 2: TRAIN MODELS (WITH SCALER)
-# ============================================================
-print("\n" + "="*70)
-print("MODEL TRAINING - WITH SCALER")
-print("="*70)
 
 model4 = RegressionModel(model_type='linear', name='Linear (With Scaler)', use_scaler=True)
 model5 = RegressionModel(model_type='ridge', name='Ridge (With Scaler)', use_scaler=True)
@@ -50,14 +34,6 @@ all_models_scaled = [model4, model5, model6]
 for model in all_models_scaled:
     model.train(X_train, y_train)
     print(f"  ✓ {model.name} trained")
-
-
-# ============================================================
-# PHASE 3: MODEL EVALUATION & COMPARISON (WITH SCALER)
-# ============================================================
-print("\n" + "="*70)
-print("MODEL EVALUATION & COMPARISON - WITH SCALER")
-print("="*70)
 
 model_metrics_scaled = {}
 model_predictions_scaled = {}
@@ -76,13 +52,6 @@ for model_name, r2 in sorted([(m, model_metrics_scaled[m]['R2']) for m in model_
     print(f"  {model_name}: R² = {r2:.6f}")
 
 
-# ============================================================
-# PHASE 4: ERROR ANALYSIS (WITH SCALER)
-# ============================================================
-print("\n" + "="*70)
-print("ERROR ANALYSIS - WITH SCALER")
-print("="*70)
-
 for model in all_models_scaled:
     errors = error_analysis(y_test, model_predictions_scaled[model.name])
     
@@ -99,16 +68,8 @@ for model in all_models_scaled:
     model_logs_scaled[model.name] = model_log
     print(f"  ✓ {model.name} analyzed")
 
-
-# ============================================================
-# PHASE 5: WRITING LOGS TO FILES (WITH SCALER)
-# ============================================================
-print("\n" + "="*70)
-print("WRITING LOGS TO FILES (WITH SCALER)")
-print("="*70)
-
 # Create Logs directory path in unused folder
-logs_dir = 'Logs'
+logs_dir = os.path.join('Logs', 'Regression')
 if not os.path.exists(logs_dir):
     os.makedirs(logs_dir)
 
@@ -123,8 +84,3 @@ print("\nModel Logs:")
 for model_name, model_log in model_logs_scaled.items():
     filename = f"model_{model_name.replace(' ', '_').replace('(', '').replace(')', '').lower()}"
     write_log(model_log, os.path.join(logs_dir, filename))
-
-
-print("\n" + "="*70)
-print("SCALER ANALYSIS COMPLETE")
-print("="*70)

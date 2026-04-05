@@ -1,23 +1,23 @@
 MODEL_COMPARISON:
   ranked_models:
       Model: Random Forest (No Scaler)
-      R2: 0.079535
-      MAE: 0.014292
-      RMSE: 0.018209
-      MAPE: 0.029199
-      Model: Linear (No Scaler)
-      R2: 0.026413
-      MAE: 0.015432
-      RMSE: 0.018731
-      MAPE: 0.031367
+      R2: 0.033490
+      MAE: 0.014372
+      RMSE: 0.018581
+      MAPE: 0.029525
       Model: Ridge (No Scaler)
-      R2: 0.026410
-      MAE: 0.015433
-      RMSE: 0.018731
-      MAPE: 0.031368
-    best_r2: 0.079535
-    worst_r2: 0.026410
-    improvement_percent: 201.152847
+      R2: 0.010570
+      MAE: 0.015460
+      RMSE: 0.018792
+      MAPE: 0.031489
+      Model: Linear (No Scaler)
+      R2: 0.010550
+      MAE: 0.015460
+      RMSE: 0.018793
+      MAPE: 0.031489
+    best_r2: 0.033490
+    worst_r2: 0.010550
+    improvement_percent: 217.441289
     inference: Signal is NON-LINEAR. Trees/Neural Nets justified.
 OUTPUT_RANGE_ANALYSIS:
   latitude:
@@ -25,14 +25,14 @@ OUTPUT_RANGE_ANALYSIS:
       max: 33.664793
       range: 0.084634
   longitude:
-      min: -117.632013
-      max: -117.576757
-      range: 0.055256
+      min: -117.631972
+      max: -117.576810
+      range: 0.055162
     interpretation: NARROW range = Hard problem (predicting fine-grained variation)
 FEATURE_TARGET_CORRELATION:
-    max_latitude_correlation: 0.064724
-    max_longitude_correlation: 0.148854
-    max_overall: 0.148854
+    max_latitude_correlation: 0.070246
+    max_longitude_correlation: 0.145670
+    max_overall: 0.145670
     signal_strength: WEAK signal - Keep models simple
 FEATURE_SAMPLE_RATIO:
     total_samples: 8000

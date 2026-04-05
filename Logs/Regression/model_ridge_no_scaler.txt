@@ -1,0 +1,21 @@
+  model_name: Ridge (No Scaler)
+  model_type: ridge
+  use_scaler: False
+metrics:
+    MAE: 0.015460
+    MSE: 0.000353
+    RMSE: 0.018792
+    R2: 0.010570
+    MAPE: 0.031489
+ERROR_ANALYSIS:
+  latitude:
+      mean_error: 0.017274
+      std_error: 0.013057
+      max_error: 0.056927
+  longitude:
+      mean_error: 0.013646
+      std_error: 0.007155
+      max_error: 0.034597
+    combined_euclidean: 0.022014
+FEATURE_IMPORTANCE:
+    status: Feature importance only available for tree models

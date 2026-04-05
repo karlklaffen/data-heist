@@ -1,0 +1,44 @@
+model_summary:
+    model_type: sklearn Random Forest Regressor
+  outputs:
+      [0]: Latitude
+      [1]: Longitude
+      [2]: Address
+    n_estimators: 100
+    max_depth: 20
+    test_samples: 2000
+metrics_by_output:
+  Latitude:
+      R2: 0.090426
+      MAE: 0.015899
+      RMSE: 0.020567
+      MAPE: 0.047283
+  Longitude:
+      R2: 0.119355
+      MAE: 0.012375
+      RMSE: 0.014626
+      MAPE: 0.010523
+  Address:
+      R2: 0.080355
+      MAE: 122.687036
+      RMSE: 152.014879
+      MAPE: 353.467967
+geographic_error:
+    mean_spatial_euclidean: 0.021421
+    std_spatial_euclidean: 0.013344
+    max_spatial_euclidean: 0.072367
+address_error:
+    mean_absolute_error: 122.687036
+    std_absolute_error: 89.757533
+    max_absolute_error: 494.856788
+top_10_features:
+    HomeImprovementDIY: 0.052014
+    AutoWork: 0.050407
+    Photography: 0.048884
+    HuntingShooting: 0.048435
+    MovieCollector: 0.048239
+    CatOwner: 0.045548
+    Health: 0.042821
+    EducationOnline: 0.042652
+    HomeImprovement: 0.042467
+    CampingHiking: 0.040887

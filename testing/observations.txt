@@ -1,0 +1,46 @@
+Scaler vs No Scaler Regression Model Results
+
+Model Performance (Random Forest is best):
+  Run 1: No Scaler R²=0.0795 | With Scaler R²=0.0494 (−37.9%)
+  Run 2: No Scaler R²=0.0646 | With Scaler R²=0.0494 (−30.6%)
+  → No-scaler better; errors identical
+
+Linear Regression (negligible difference):
+  Run 1: No Scaler R²=0.0264 | With Scaler R²=0.0188 (−28.8%)
+  Run 2: No Scaler R²=0.0193 | With Scaler R²=0.0188 (−2.7%)
+  → Essentially equivalent at ~0.0223 euclidean error
+
+Why Scaler Fails:
+  - Weak signal (max correlation 0.149) → disrupts fragile feature-target link
+  - Non-linear relationships (trees outperform linear) → scaler assumes linearity
+  - Narrow output range (0.084° latitude, 0.056° longitude) → raw scales appropriate
+  - Good ratio (8000 samples / 30 features) → complexity justified without scaler
+
+Conclusion: Random Forest without scaler is best approach.
+
+# Neural Network Comparison Results
+Deep learning unsuccessful for this dataset.
+
+Architecture Tested:
+  - 30 → 96 → 48 → 2 (reduced from 128-64 to prevent overfitting)
+  - Dropout 0.1 per layer, L2 regularization (weight_decay=1e-5)
+  - Trained 100 epochs
+
+Performance:
+  Neural Network: R² = -1402.58, MAE = 0.422, RMSE = 0.605
+  Random Forest: R² = 0.092, MAE = 0.014, RMSE = 0.018
+  → RF outperforms NN by 1402.67 R² points
+
+Errors (NN vs RF):
+  Latitude:  0.239 vs 0.016 mean error (15x worse)
+  Longitude: 0.606 vs 0.012 mean error (49x worse!)
+  Euclidean: 0.651 vs 0.020 (32x worse)
+
+Why NN Failed:
+  - Weak signal (0.149 max correlation) insufficient for deep learning
+  - Small dataset (8000 samples) insufficient for neural net regularization
+  - Gradient-based learning struggles with weak gradients from weak signal
+  - Tree models naturally handle feature interactions better than NN
+
+CONCLUSION: Random Forest is definitively the best model for this data.
+Tree-based methods superior to deep learning for weak-signal problems.

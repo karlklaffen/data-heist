@@ -9,11 +9,13 @@ class GeoPredictor(nn.Module):
     def __init__(self, input_size):
         super(GeoPredictor, self).__init__()
         self.network = nn.Sequential(
-            nn.Linear(input_size, 128),
+            nn.Linear(input_size, 96),
             nn.ReLU(),
-            nn.Linear(128, 64),
+            nn.Dropout(0.1),  
+            nn.Linear(96, 48),
             nn.ReLU(),
-            nn.Linear(64, 2) 
+            nn.Dropout(0.1),
+            nn.Linear(48, 2) 
         )
     
     def forward(self, x):
@@ -25,13 +27,13 @@ class NNTrainer:
     def __init__(self, input_size, learning_rate=0.001, device='cpu'):
         self.device = device
         self.model = GeoPredictor(input_size).to(device)
-        self.optimizer = torch.optim.Adam(self.model.parameters(), lr=learning_rate)
+        # L2 regularization via weight_decay
+        self.optimizer = torch.optim.Adam(self.model.parameters(), lr=learning_rate, weight_decay=1e-5)
         self.loss_fn = nn.MSELoss()
         self.train_losses = []
         self.val_losses = []
     
     def train_epoch(self, train_loader):
-        """Train for one epoch"""
         self.model.train()
         epoch_loss = 0.0
         
@@ -71,7 +73,7 @@ class NNTrainer:
         self.val_losses.append(avg_loss)
         return avg_loss
     
-    def fit(self, X_train, y_train, X_val, y_val, epochs=50, batch_size=32):
+    def fit(self, X_train, y_train, X_val, y_val, epochs=100, batch_size=32):
         """
         Train the model
         
@@ -80,7 +82,7 @@ class NNTrainer:
             y_train: Training targets (numpy array or tensor)
             X_val: Validation features
             y_val: Validation targets
-            epochs: Number of training epochs
+            epochs: Max number of training epochs
             batch_size: Batch size for training
         """
         # Convert to tensors

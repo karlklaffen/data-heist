@@ -72,10 +72,10 @@ def write_log(log_dict, filename, log_type='model'):
     
     filepath = os.path.join(log_dir, f"{filename}.txt")
     
-    with open(filepath, 'w') as f:
+    with open(filepath, 'w', encoding='utf-8') as f:
         _write_log_recursive(f, log_dict, indent=0)
     
-    print(f"  → Logged to {filepath}")
+    print(f"  [OK] Logged to {filepath}")
 
 
 def _write_log_recursive(file, data, indent=0):
