@@ -14,8 +14,8 @@ useless_columns = ['RecordID', 'MAK', 'BaseMak', 'Address', 'City', 'State', 'Zi
 df = df.drop(columns=useless_columns)
 details = df.columns
 
-print(details)
-print(df.to_numpy().flatten())
+#print(details)
+#print(df.to_numpy().flatten())
 
 # y, m, o = 1 (yes, married, owner)
 # n, s, r, nan = 0 (no, single, renter)
@@ -34,7 +34,7 @@ y = pd.concat([df['Latitude'], df['Longitude']], axis = 1)
 
 X_train, X_test, y_train, y_test = sklearn.model_selection.train_test_split(X, y, test_size=0.2)
 
-print(X_train)
-print(y_train)
+#print(X_train)
+#print(y_train)
 
 # useful_data.to_csv('Datasets/clean_consumer_data.csv', index = False)

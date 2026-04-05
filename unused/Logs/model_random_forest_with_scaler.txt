@@ -1,0 +1,51 @@
+  model_name: Random Forest (With Scaler)
+  model_type: random_forest
+  use_scaler: True
+metrics:
+    MAE: 0.014472
+    MSE: 0.000341
+    RMSE: 0.018456
+    R2: 0.049370
+    MAPE: 0.029708
+ERROR_ANALYSIS:
+  latitude:
+      mean_error: 0.016390
+      std_error: 0.013418
+      max_error: 0.069903
+  longitude:
+      mean_error: 0.012555
+      std_error: 0.008658
+      max_error: 0.044369
+    combined_euclidean: 0.020646
+FEATURE_IMPORTANCE:
+  top_features:
+    rank_1:
+        feature_index: 14
+        importance: 0.054165
+    rank_2:
+        feature_index: 6
+        importance: 0.053141
+    rank_3:
+        feature_index: 19
+        importance: 0.050794
+    rank_4:
+        feature_index: 16
+        importance: 0.048517
+    rank_5:
+        feature_index: 15
+        importance: 0.048165
+    rank_6:
+        feature_index: 3
+        importance: 0.046011
+    rank_7:
+        feature_index: 18
+        importance: 0.044964
+    rank_8:
+        feature_index: 12
+        importance: 0.044392
+    rank_9:
+        feature_index: 29
+        importance: 0.044271
+    rank_10:
+        feature_index: 23
+        importance: 0.043820

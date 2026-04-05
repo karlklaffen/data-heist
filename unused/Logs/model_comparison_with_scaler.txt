@@ -1,0 +1,21 @@
+MODEL_COMPARISON:
+  ranked_models:
+      Model: Random Forest (With Scaler)
+      R2: 0.049370
+      MAE: 0.014472
+      RMSE: 0.018456
+      MAPE: 0.029708
+      Model: Ridge (With Scaler)
+      R2: 0.018780
+      MAE: 0.015647
+      RMSE: 0.018742
+      MAPE: 0.031889
+      Model: Linear (With Scaler)
+      R2: 0.018777
+      MAE: 0.015647
+      RMSE: 0.018742
+      MAPE: 0.031889
+    best_r2: 0.049370
+    worst_r2: 0.018777
+    improvement_percent: 162.923972
+    inference: Signal is NON-LINEAR. Trees/Neural Nets justified.

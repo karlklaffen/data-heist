@@ -1,0 +1,21 @@
+  model_name: Linear (With Scaler)
+  model_type: linear
+  use_scaler: True
+metrics:
+    MAE: 0.015647
+    MSE: 0.000351
+    RMSE: 0.018742
+    R2: 0.018777
+    MAPE: 0.031889
+ERROR_ANALYSIS:
+  latitude:
+      mean_error: 0.017502
+      std_error: 0.012465
+      max_error: 0.059854
+  longitude:
+      mean_error: 0.013792
+      std_error: 0.007114
+      max_error: 0.040463
+    combined_euclidean: 0.022283
+FEATURE_IMPORTANCE:
+    status: Feature importance only available for tree models
