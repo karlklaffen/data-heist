@@ -34,4 +34,8 @@ Outdoor & Fitness- Fishing, Camping/Hiking, Hunting/Shooting, Outdoor groups.
 
 ## Methodology
 ## Tech Stack
+Python
+Skitlearn
+pandas
+numpy
 
